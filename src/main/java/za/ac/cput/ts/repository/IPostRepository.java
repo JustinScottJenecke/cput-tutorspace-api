@@ -1,4 +1,10 @@
 package za.ac.cput.ts.repository;
 
-public interface IPostRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import za.ac.cput.ts.entity.Post;
+
+@Repository
+public interface IPostRepository extends JpaRepository <Post, Integer> {
 }

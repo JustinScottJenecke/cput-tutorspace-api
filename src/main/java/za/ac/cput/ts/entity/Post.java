@@ -1,13 +1,22 @@
 package za.ac.cput.ts.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  * Author: Justin Jenecke
  * Desc: Post.java POJO entity
  * Date: 10 Sept 2021
  * */
+@Entity
 public class Post {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int postId;
+
     private int studentNo;
     private String firstName, lastName, email, institution, major, subject;
 
