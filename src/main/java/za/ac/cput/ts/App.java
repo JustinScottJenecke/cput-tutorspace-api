@@ -1,4 +1,4 @@
-package za.ac.cput.tutorspace.api;
+package za.ac.cput.ts;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

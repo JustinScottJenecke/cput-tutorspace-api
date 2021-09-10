@@ -1,5 +1,10 @@
-package za.ac.cput.tutorspace.api.entity;
+package za.ac.cput.ts.entity;
 
+/**
+ * Author: Justin Jenecke
+ * Desc: Post.java POJO entity
+ * Date: 10 Sept 2021
+ * */
 public class Post {
 
     private int postId;
@@ -66,7 +71,7 @@ public class Post {
                 '}';
     }
 
-    public class Builder {
+    public static class Builder {
 
         private int postId;
         private int studentNo;
