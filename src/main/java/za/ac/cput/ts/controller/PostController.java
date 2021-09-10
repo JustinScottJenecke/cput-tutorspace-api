@@ -7,16 +7,16 @@ import za.ac.cput.ts.service.PostService;
 
 import java.util.List;
 
-@RequestMapping("/ts/api/post")
+@RequestMapping("/ts/api/v1/post")
 @RestController
 public class PostController {
 
     @Autowired
     private PostService postService;
 
-    @RequestMapping("/")
+    @RequestMapping("")
     public String h() {
-        return "create - read{id} - update - delete{id}";
+        return "/create - /read/{id} - /update - /delete/{id}";
     }
 
     @PostMapping("/create")
