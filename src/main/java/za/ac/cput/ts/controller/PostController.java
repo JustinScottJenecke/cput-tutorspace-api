@@ -1,10 +1,11 @@
 package za.ac.cput.ts.controller;
 
-import javafx.geometry.Pos;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import za.ac.cput.ts.entity.Post;
 import za.ac.cput.ts.service.PostService;
+
+import java.util.List;
 
 @RequestMapping("/ts/api/post")
 @RestController
@@ -39,7 +40,11 @@ public class PostController {
     public boolean deletePost(@PathVariable int id) {
         this.postService.delete(id);
         return this.postService.checkExists(id);
+    }
 
+    @GetMapping("/all")
+    public List<Post> getAll() {
+        return this.postService.readAll();
     }
 
 }

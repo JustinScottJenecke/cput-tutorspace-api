@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import za.ac.cput.ts.entity.Post;
 import za.ac.cput.ts.repository.IPostRepository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -33,5 +34,7 @@ public class PostService {
     public boolean checkExists(int id) {
         return this.postRepository.existsById(id);
     }
+
+    public List<Post> readAll() {return this.postRepository.findAll();}
 
 }
