@@ -18,16 +18,16 @@ public class PostService {
         return this.postRepository.save(post);
     }
 
-    public Post read(int id) {
-        return this.postRepository.getById(id);
+    public Post read(int postId) {
+        return this.postRepository.findById(postId).orElseGet(null);
     }
 
     public Post update(Post post) {
         return this.postRepository.save(post);
     }
 
-    public void delete(int id) {
-        this.postRepository.deleteById(id);
+    public void delete(int postId) {
+        this.postRepository.deleteById(postId);
     }
 
     public boolean checkExists(int id) {
